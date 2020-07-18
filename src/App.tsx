@@ -1,8 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/images/logo.svg';
+import './assets/css/App.css';
+import Greetings from "./components/Greetings";
 
 function App() {
+  const onClick = (name: string) => {
+      alert(`${name} say hello`)
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +23,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Greetings name={'태훈'} onClick={onClick}/>
     </div>
   );
 }
