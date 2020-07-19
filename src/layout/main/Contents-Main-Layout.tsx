@@ -1,8 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom'
-
-import Index from 'components'
-import WeatherIndex from 'components/weather';
+import { BrowserRouter, Link } from 'react-router-dom'
+import MainRoute from 'router/main/route'
 
 type props = {
   isShow: boolean
@@ -10,17 +8,22 @@ type props = {
 
 function ContentsMainLayout({ isShow }: props) {
   return (
-    <BrowserRouter>
-      <ul>
-        <li><Link to={'/'}>/</Link></li>
-        <li><Link to={'/weather'}>/weather</Link></li>
-      </ul>
-      <Switch>
-        <Route exact path={'/'} component={Index}></Route>
-        <Route path={'/weather'} component={WeatherIndex}></Route>
-        <Redirect path="*" to="/" />
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <ul>
+          <li>
+            <Link to={'/'}>/</Link>
+          </li>
+          <li>
+            <Link to={'/weather'}>/weather</Link>
+          </li>
+          <li>
+            <Link to={'/board'}>/board</Link>
+          </li>
+        </ul>
+        <MainRoute />
+      </BrowserRouter>
+    </div>
   )
 }
 

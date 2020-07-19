@@ -5,7 +5,7 @@ type props = {
   isShow: boolean
 }
 
-function HeaderMainLayout({ title }: props) {
+function HeaderPopupLayout({ title }: props) {
   return (
     <div>
       <p>{title}</p>
@@ -13,9 +13,9 @@ function HeaderMainLayout({ title }: props) {
   )
 }
 
-HeaderMainLayout.defaultProps = {
+HeaderPopupLayout.defaultProps = {
   title: '출근앱',
   isShow: true,
 }
 
-export default HeaderMainLayout
+export default HeaderPopupLayout
