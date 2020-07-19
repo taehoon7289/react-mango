@@ -5,7 +5,7 @@ type props = {
   isShow: boolean
 }
 
-function HeaderLayout({ title }: props) {
+function SidebarMainLayout({ title }: props) {
   return (
     <div>
       <p>{title}</p>
@@ -13,9 +13,9 @@ function HeaderLayout({ title }: props) {
   )
 }
 
-HeaderLayout.defaultProps = {
-  title: '출근앱',
+SidebarMainLayout.defaultProps = {
+  title: '출근앱 - 사이드바',
   isShow: true,
 }
 
-export default HeaderLayout
+export default SidebarMainLayout

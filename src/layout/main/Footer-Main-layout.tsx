@@ -4,12 +4,12 @@ type props = {
   isShow: boolean
 }
 
-function FooterLayout({ isShow }: props) {
+function FooterMainLayout({ isShow }: props) {
   return <div>footer layout</div>
 }
 
-FooterLayout.defaultProps = {
+FooterMainLayout.defaultProps = {
   isShow: true,
 }
 
-export default FooterLayout
+export default FooterMainLayout
