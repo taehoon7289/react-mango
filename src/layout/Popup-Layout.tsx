@@ -1,8 +1,6 @@
 import React from 'react'
-import HeaderMainLayout from 'layout/main/Header-Main-Layout'
-import SidebarMainLayout from 'layout/main/Sidebar-Main-Layout'
-import ContentsMainLayout from 'layout/main/Contents-Main-Layout'
-import FooterMainLayout from 'layout/main/Footer-Main-layout'
+import HeaderPopupLayout from 'layout/popup/Header-Popup-Layout'
+import ContentsPopupLayout from 'layout/popup/Contents-Popup-Layout'
 
 type props = {
   isShow: boolean
@@ -11,10 +9,8 @@ type props = {
 function PopupLayout({ isShow }: props) {
   return (
     <div>
-      <HeaderMainLayout />
-      <SidebarMainLayout />
-      <ContentsMainLayout />
-      <FooterMainLayout />
+      <HeaderPopupLayout />
+      <ContentsPopupLayout />
     </div>
   )
 }

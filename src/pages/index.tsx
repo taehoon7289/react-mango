@@ -1,5 +1,6 @@
 import React from 'react'
 import Meta from 'common/object/Meta'
+import ApiBoard from 'common/api/ApiBoard'
 
 type typeProps = {
   meta: Meta
@@ -13,12 +14,22 @@ class Index extends React.Component<typeProps, typeState> {
   constructor(props: typeProps) {
     super(props)
     this.state = {
-      text: '인덱스 자리2'
+      text: '인덱스 자리2',
     }
+    this.findBoardAll = this.findBoardAll.bind(this)
+  }
+
+  async componentDidMount() {
+    console.log('componentDidMount!!!')
+    const params = {}
+    console.log('api :: ', await ApiBoard.getListOfBoard(params))
+  }
+
+  findBoardAll() {
+    console.log('findBoardAll')
   }
 
   render() {
-    console.log('메타정보', this.props)
     return <div>{this.state.text}</div>
   }
 }

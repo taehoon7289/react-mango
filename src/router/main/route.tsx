@@ -5,7 +5,7 @@ import WeatherIndex from 'pages/weather'
 import BoardIndex from 'pages/board'
 
 function MainRoute() {
-  const metaIndex = { name: 'index', depth: 1 }
+  const metaIndex = { name: 'index', depth: 1, desc: '메인페이지' }
   const metaWeatherIndex = { name: 'weather-index', depth: 1 }
   const metaBoardIndex = { name: 'board-index', depth: 1 }
   return (
