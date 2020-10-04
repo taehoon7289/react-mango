@@ -1,5 +1,5 @@
 import React from 'react'
-import Meta from 'common/object/Meta'
+import Meta from 'common/config/Meta'
 
 type typeProps = {
   meta: Meta

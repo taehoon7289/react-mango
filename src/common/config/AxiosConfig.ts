@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-class ApiCommon {
+class AxiosConfig {
   $axios: any
   constructor() {
     this.$axios = axios.create({
@@ -30,7 +30,6 @@ class ApiCommon {
   handlerResponseException(error: any) {
     const res = error.response
     console.log('handlerResponseException', res)
-    console.log('response status', res.status)
     if (res.status === 401) {
       console.log('토큰 문제임')
     }
@@ -38,4 +37,4 @@ class ApiCommon {
   }
 }
 
-export default ApiCommon
+export default AxiosConfig
